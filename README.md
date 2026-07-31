@@ -3,6 +3,7 @@
 A comparative product analytics case study exploring how customer journeys, retention, and growth differ across a B2C e-commerce business and a SaaS subscription business using SQL.
 
 ---
+
 ## Project Overview
 
 Although product analytics relies on familiar concepts such as funnels, cohorts, retention, and conversion, these metrics often represent very different business questions depending on the product.
@@ -28,6 +29,7 @@ This project analyzes two PostgreSQL datasets—a B2C e-commerce business and a 
 - Expansion Revenue Analysis
 
 ---
+
 ## Skills Demonstrated
 
 ### SQL
@@ -54,6 +56,7 @@ This project analyzes two PostgreSQL datasets—a B2C e-commerce business and a 
 - Comparative Product Analysis
 
 ---
+
 # Database Schemas
 
 ## E-commerce
@@ -137,30 +140,33 @@ accounts ||--o{ invoices : "billed (b2b)"
 ```
 
 ---
+
 # Analysis Summary
 
 ## B2C E-commerce
 
-| Analysis | Business Question | SQL Concepts |
-|:---------|:------------------|:-------------|
-| Customer Activation | How quickly do new customers reach their first meaningful action? | Window functions, event sequencing |
-| Checkout Funnel | Where do customers abandon the purchase journey? | Funnel analysis, conditional aggregation |
-| Weekly Retention | How effectively are customers retained after signup? | Cohort analysis |
-| Product Opportunity Analysis | Which products receive interest but fail to convert? | Ranking, joins |
-| Cart Abandonment | Which cart segments contribute most to lost revenue? | Aggregation, segmentation |
+| Analysis                     | Business Question                                                 | SQL Concepts                             |
+| :--------------------------- | :---------------------------------------------------------------- | :--------------------------------------- |
+| Customer Activation          | How quickly do new customers reach their first meaningful action? | Window functions, event sequencing       |
+| Checkout Funnel              | Where do customers abandon the purchase journey?                  | Funnel analysis, conditional aggregation |
+| Weekly Retention             | How effectively are customers retained after signup?              | Cohort analysis                          |
+| Product Opportunity Analysis | Which products receive interest but fail to convert?              | Ranking, joins                           |
+| Cart Abandonment             | Which cart segments contribute most to lost revenue?              | Aggregation, segmentation                |
 
 ---
+
 ## SaaS
 
-| Analysis | Business Question | SQL Concepts |
-|:---------|:------------------|:-------------|
-| Monthly Recurring Revenue | How is recurring revenue changing over time? | Running totals, revenue reconciliation |
-| Trial Conversion | How effectively do trials convert into paid subscriptions? | Cohort analysis |
-| Revenue Retention | How much recurring revenue is retained and expanded? | GRR, NRR calculations |
-| Payment Recovery | Which failed payments are successfully recovered? | Funnel analysis |
-| Expansion Revenue | What drives growth from existing customers? | Revenue categorization |
+| Analysis                  | Business Question                                          | SQL Concepts                           |
+| :------------------------ | :--------------------------------------------------------- | :------------------------------------- |
+| Monthly Recurring Revenue | How is recurring revenue changing over time?               | Running totals, revenue reconciliation |
+| Trial Conversion          | How effectively do trials convert into paid subscriptions? | Cohort analysis                        |
+| Revenue Retention         | How much recurring revenue is retained and expanded?       | GRR, NRR calculations                  |
+| Payment Recovery          | Which failed payments are successfully recovered?          | Funnel analysis                        |
+| Expansion Revenue         | What drives growth from existing customers?                | Revenue categorization                 |
 
 ---
+
 # Comparative Case Study
 
 The complete write-up comparing both business models is available in **[CASE_STUDY.md](https://able-bat-6e9.notion.site/B2C-vs-B2B-How-Funnels-and-Retention-Actually-Differ-3ae85cc041fb80398e56f2aa4a3a5764?source=copy_link)**.
@@ -174,6 +180,7 @@ The case study explores:
 - Reflections on product analytics across domains
 
 ---
+
 # Key Insights
 
 Some of the major observations from this project include:
@@ -184,10 +191,11 @@ Some of the major observations from this project include:
 - Defining business metrics correctly is often more important than writing complex SQL.
 
 ---
+
 # How to Run
 
 - Connect to the Metabase database.
-- Open the appropriate SQL script from  the `queries/` directory.
+- Open the appropriate SQL script from the `queries/` directory.
 - Execute the query.
 - Each query includes:
   - Business objective
@@ -196,6 +204,7 @@ Some of the major observations from this project include:
   - Validation checks
 
 ---
+
 # Assumptions
 
 ### E-commerce
@@ -213,6 +222,7 @@ Some of the major observations from this project include:
 - Subscription analyses are performed at the account/subscription level.
 
 ---
+
 ## Reflection
 
 ### What I Learned
@@ -224,22 +234,33 @@ This project reinforced that strong product analytics begins with defining busin
 I'd extend this project by building interactive dashboards, segmenting analyses by customer acquisition channels and account types, and incorporating experimentation data to evaluate how product changes influence conversion, retention, and long-term customer value.
 
 ---
+
 # Repository Structure
 
 ```
 .
 ├── queries/
-│   ├── queries/
+│   ├── e1_customer_activation.sql
+│   ├── e2_checkout_funnel.sql
+│   ├── e3_weekly_cohort_retention.sql
+│   ├── e4_high_view_low_cart_products.sql
+│   ├── e5_cart_abandonment_analysis.sql
+│   ├── s1_monthly_mrr_movement.sql
+│   ├── s2_trial_to_paid_conversion.sql
+│   ├── s3_gross_net_revenue_retention.sql
+│   ├── s4_payment_recovery_dunning_funnel.sql
+│   └── s5_expansion_revenue_analysis.sql
 │
 ├── notes/
-│   ├── saas_schema
+│   └── saas_schema.md
 │
 ├── CASE_STUDY.md
-│
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
 ---
+
 # Author
 
 **Adyasha Mahanta**
